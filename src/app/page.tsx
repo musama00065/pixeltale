@@ -26,7 +26,8 @@ import {
   Play,
   Wand,
   Feather,
-  Rocket
+  Rocket,
+  Trash2
 } from "lucide-react";
 import { compressImage, calculateReadingTime } from "./utils/image-utils";
 import DualLayerButton from "./components/DualLayerButton";
@@ -453,6 +454,14 @@ export default function PixelTaleApp() {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     });
+  };
+
+  const clearHistory = () => {
+    if (window.confirm("Are you sure you want to clear your local story history?")) {
+      setHistory([]);
+      sessionStorage.removeItem("pixeltale_history");
+      setShowHistory(false);
+    }
   };
 
   return (
@@ -1160,12 +1169,21 @@ export default function PixelTaleApp() {
                 <History className="h-4.5 w-4.5 text-primary animate-pulse" />
                 <span>Local Session History</span>
               </h3>
-              <button
-                onClick={() => setShowHistory(false)}
-                className="text-gray-400 hover:text-gray-600 text-xs font-semibold cursor-pointer"
-              >
-                Close
-              </button>
+              <div className="flex items-center gap-4">
+                <button
+                  onClick={clearHistory}
+                  className="text-red-500 hover:text-red-700 text-xs font-bold cursor-pointer flex items-center gap-1 bg-transparent border-0"
+                >
+                  <Trash2 className="h-3.5 w-3.5" />
+                  <span>Clear History</span>
+                </button>
+                <button
+                  onClick={() => setShowHistory(false)}
+                  className="text-gray-400 hover:text-gray-600 text-xs font-semibold cursor-pointer bg-transparent border-0"
+                >
+                  Close
+                </button>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 overflow-y-auto max-h-[350px] pr-2">
