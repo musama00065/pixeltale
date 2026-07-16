@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pixeltale.vercel.app/sitemap.xml

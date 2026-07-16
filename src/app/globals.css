@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #F15A5A;      /* Coral Red */
+  --color-primary-hover: #D94B4B;
+  --color-secondary: #F5A623;    /* Soft Amber */
+  --color-secondary-hover: #E0951C;
+  --color-cozy-bg: #FCFAF6;      /* Warm Peach Cream */
+  --color-cozy-surface: #FFFFFF; /* White */
+  --color-cozy-slate: #2C3E50;   /* Deep Slate */
+  
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-dm-serif), Georgia, serif;
+  --font-story: var(--font-merriweather), Georgia, serif;
+}
+
+:root {
+  --background: #FCFAF6;
+  --foreground: #2C3E50;
+  --theme-border: rgba(44, 62, 80, 0.08); /* Deep Slate Tint */
+}
+
+body {
+  background-color: var(--color-cozy-bg);
+  color: var(--color-cozy-slate);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5E1DA;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C4C1B9;
+}
+
+/* Elegant Text Selection */
+::selection {
+  background-color: rgba(255, 107, 107, 0.2);
+  color: #FF6B6B;
+}
+
+/* Marke Editorial Typography Classes */
+.font-h1 {
+  font-size: 72px;
+  line-height: 80px;
+  letter-spacing: -1.44px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .font-h1 {
+    font-size: 42px;
+    line-height: 48px;
+    letter-spacing: -0.84px;
+  }
+}
+
+.font-h2 {
+  font-size: 56px;
+  line-height: 60px;
+  letter-spacing: -0.56px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .font-h2 {
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: -0.32px;
+  }
+}
+
+.font-lead {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.font-body {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Custom transitions and glassmorphism helpers */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--theme-border);
+}
+
+.theme-border {
+  border: 1px solid var(--theme-border);
+}
+
+.book-shadow {
+  box-shadow: 0 10px 30px -10px rgba(44, 62, 80, 0.12),
+              0 1px 3px rgba(44, 62, 80, 0.05);
+}
+
+.active-pulse {
+  animation: pulse-slow 3s infinite ease-in-out;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(0.995);
+  }
+}
+
+/* Rolling numbers utility styles */
+.rolling-container {
+  height: 1em;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+.rolling-column {
+  display: flex;
+  flex-direction: column;
+  transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.rolling-digit {
+  height: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
