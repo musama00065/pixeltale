@@ -467,14 +467,8 @@ export default function PixelTaleApp() {
             {/* Real SVG Logo with gold/red gradient */}
             <div className="h-8 w-9 relative flex items-center justify-center">
               <svg className="w-full h-full" viewBox="0 0 36 32" fill="none">
-                <path d="M4,28 C10,28 14,24 18,24 C22,24 26,28 32,28 L32,6 C26,6 22,2 18,2 C14,2 10,6 4,6 Z" fill="url(#logoGrad)" />
-                <path d="M18,2 L18,24" stroke="#FFF" strokeWidth="2" strokeLinecap="round" />
-                <defs>
-                  <linearGradient id="logoGrad" x1="4" y1="15" x2="32" y2="15" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#F5A623" />
-                    <stop offset="100%" stopColor="#F15A5A" />
-                  </linearGradient>
-                </defs>
+                <path d="M4,28 C10,28 14,24 17,24 L17,2.5 C14,2.5 10,6 4,6 Z" fill="#EE9825" />
+                <path d="M19,2.5 C22,2.5 26,6 32,6 L32,28 C26,28 22,24 19,24 Z" fill="#F15A5A" />
               </svg>
             </div>
             <span className="font-serif font-bold text-xl tracking-tight text-cozy-slate">
@@ -1256,14 +1250,8 @@ export default function PixelTaleApp() {
             {/* Real SVG Logo with gold/red gradient */}
             <div className="h-6 w-7 relative flex items-center justify-center">
               <svg className="w-full h-full" viewBox="0 0 36 32" fill="none">
-                <path d="M4,28 C10,28 14,24 18,24 C22,24 26,28 32,28 L32,6 C26,6 22,2 18,2 C14,2 10,6 4,6 Z" fill="url(#footerLogoGrad)" />
-                <path d="M18,2 L18,24" stroke="#FFF" strokeWidth="2" strokeLinecap="round" />
-                <defs>
-                  <linearGradient id="footerLogoGrad" x1="4" y1="15" x2="32" y2="15" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#F5A623" />
-                    <stop offset="100%" stopColor="#F15A5A" />
-                  </linearGradient>
-                </defs>
+                <path d="M4,28 C10,28 14,24 17,24 L17,2.5 C14,2.5 10,6 4,6 Z" fill="#EE9825" />
+                <path d="M19,2.5 C22,2.5 26,6 32,6 L32,28 C26,28 22,24 19,24 Z" fill="#F15A5A" />
               </svg>
             </div>
             <span className="font-serif font-bold text-sm tracking-tight text-white">

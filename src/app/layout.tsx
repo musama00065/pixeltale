@@ -23,10 +23,10 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
-  title: "PixelTale — AI-Powered Image-to-Story Generator",
+  title: "PixelTale",
   description: "Transform ordinary photos into beautiful, unique stories inspired by colors, mood, and scenery, powered by Gemini 3.5 Flash.",
   openGraph: {
-    title: "PixelTale — AI-Powered Image-to-Story Generator",
+    title: "PixelTale",
     description: "Transform ordinary photos into beautiful, unique stories inspired by colors, mood, and scenery.",
     type: "website",
     locale: "en_US",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PixelTale — AI-Powered Image-to-Story Generator",
+    title: "PixelTale",
     description: "Transform ordinary photos into beautiful, unique stories inspired by colors, mood, and scenery.",
   },
 };
