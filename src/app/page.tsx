@@ -457,6 +457,7 @@ export default function PixelTaleApp() {
   };
 
   const clearHistory = () => {
+    // Trigger Vercel rebuild deployment
     if (window.confirm("Are you sure you want to clear your local story history?")) {
       setHistory([]);
       sessionStorage.removeItem("pixeltale_history");
